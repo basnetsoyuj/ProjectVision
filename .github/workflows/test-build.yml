@@ -19,4 +19,4 @@ jobs:
       - name: Install pub Dependencies
         run: flutter pub get
       - name: Build Android App
-        run: flutter build apk -t lib/main.dart --split-per-abi --no-tree-shake-icons
+        run: flutter build apk -t lib/main.dart --split-per-abi --no-tree-shake-iconsd
