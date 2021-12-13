@@ -13,7 +13,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v1
         with:
-          java-version: '14.x'
+          java-version: '12.x'
       - name: Set up Flutter
         uses: subosito/flutter-action@v1
         with:
@@ -22,7 +22,7 @@ jobs:
       - name: Install pub Dependencies
         run: flutter pub get
       - name: Build Android App
-        run: flutter build apk -t lib/main.dart --split-per-abi
+        run: flutter build apk -t lib/main.dart --split-per-abi --no-tree-shake-icons
       - name: Release APK
         uses: ncipollo/release-action@v1
         with:
